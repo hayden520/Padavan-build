@@ -12,7 +12,6 @@ on:
 #  schedule:
 #    - cron: 0 8 * * 5
   pull_request:
-  workflow_dispatch:
   release:
     types: [published]
   watch:
