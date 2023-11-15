@@ -11,11 +11,16 @@ on:
   #    - master
 #  schedule:
 #    - cron: 0 8 * * 5
+  pull_request:
+  workflow_dispatch:
+  release:
+    types: [published]
   watch:
     types: [started]
 
 jobs:
   build:
+    name: build
     runs-on: ubuntu-18.04
     if: github.event.repository.owner.id == github.event.sender.id
 
